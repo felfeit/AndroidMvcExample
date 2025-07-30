@@ -1,4 +1,4 @@
-package com.felfeit.androidmvcexample.view.splash
+package com.felfeit.androidmvcexample.view.pages.splash
 
 import android.content.Intent
 import android.os.Bundle

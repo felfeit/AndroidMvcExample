@@ -8,7 +8,6 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/background_color"
     tools:context=".view.pages.login.LoginActivity">
 
     <com.google.android.material.textview.MaterialTextView
@@ -17,8 +16,8 @@
         android:layout_marginBottom="16dp"
         android:text="Welcome Back!"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -43,8 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="Password"
-        app:placeholderText="Enter password"
         android:imeOptions="actionDone"
+        app:placeholderText="Enter password"
         app:startIconDrawable="@drawable/ic_password">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -62,27 +61,5 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="16dp"
         android:text="Login" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="24dp"
-        android:gravity="center">
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account?"
-            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/navigate_to_register_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            style="@style/Widget.Material3.Button.TextButton"/>
-
-    </LinearLayout>
 
 </LinearLayout>

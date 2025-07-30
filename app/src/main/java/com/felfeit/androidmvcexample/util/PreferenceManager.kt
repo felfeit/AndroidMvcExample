@@ -12,6 +12,7 @@ class PreferenceManager(context: Context) {
         prefs.edit().apply {
             putString(ACCESS_TOKEN_KEY, accessToken)
             putString(REFRESH_TOKEN_KEY, refreshToken)
+            putLong(TOKEN_TIMESTAMP, System.currentTimeMillis())
             apply()
         }
     }

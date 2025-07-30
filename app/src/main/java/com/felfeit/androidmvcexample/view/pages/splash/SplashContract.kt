@@ -1,4 +1,4 @@
-package com.felfeit.androidmvcexample.view.splash
+package com.felfeit.androidmvcexample.view.pages.splash
 
 interface SplashContract {
     interface View {

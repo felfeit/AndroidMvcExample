@@ -2,13 +2,10 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Widget.Material3.CardView.Elevated"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
-    app:cardElevation="4dp"
-    app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="12dp"
     app:contentPadding="16dp">
 
@@ -21,32 +18,29 @@
             android:id="@+id/text_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="@tools:sample/lorem[3]"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:maxLines="1"
             android:ellipsize="end"
-            android:textStyle="bold" />
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@tools:sample/lorem[3]" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            tools:text="@tools:sample/lorem[10]"
-            android:textColor="#444"
-            android:maxLines="1"
             android:ellipsize="end"
-            android:textSize="14sp" />
+            android:maxLines="1"
+            android:textSize="14sp"
+            tools:text="@tools:sample/lorem[10]" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_tags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            tools:text="Tags: history, american, crime"
-            android:textColor="#777"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:text="Tags: history, american, crime" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,38 +52,35 @@
                 android:id="@+id/text_likes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="192"
+                android:layout_weight="0.25"
+                android:drawableStart="@drawable/ic_like"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical"
-                app:drawableTint="#FF0000"
-                android:drawableStart="@drawable/ic_like"
-                android:textColor="#252525"
-                android:layout_weight="0.25"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                app:drawableTint="?colorError"
+                tools:text="192" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_dislikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="192"
+                android:layout_weight="0.75"
+                android:drawableStart="@drawable/ic_dislike"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical"
-                app:drawableTint="#666666"
-                android:drawableStart="@drawable/ic_dislike"
-                android:textColor="#252525"
-                android:layout_weight="0.75"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                app:drawableTint="?colorOnSurfaceVariant"
+                tools:text="192" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_views"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="305"
                 android:drawableStart="@drawable/ic_view"
                 android:drawablePadding="8dp"
-                app:drawableTint="#252525"
-                android:textColor="#252525"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                app:drawableTint="?colorOnSurfaceVariant"
+                tools:text="305" />
         </LinearLayout>
 
     </LinearLayout>

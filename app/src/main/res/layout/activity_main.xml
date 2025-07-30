@@ -5,15 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
-    tools:context=".view.splash.MainActivity">
+    tools:context=".view.pages.splash.MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/app_icon"
         android:layout_centerInParent="true"
-        android:background="@color/black"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
 </RelativeLayout>

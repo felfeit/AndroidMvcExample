@@ -10,8 +10,8 @@ class AuthInterceptor(private val prefs: PreferenceManager) : Interceptor {
         val request = chain.request()
         val path = request.url.encodedPath
 
-        // Skip adding token for login and register
-        val isAuthExcluded = path.contains("/auth/login") || path.contains("/users/add")
+        // Skip adding token for login
+        val isAuthExcluded = path.contains("/auth/login")
 
         return if (isAuthExcluded) {
             chain.proceed(request)

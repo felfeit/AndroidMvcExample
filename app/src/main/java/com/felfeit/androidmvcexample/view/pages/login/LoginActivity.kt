@@ -14,7 +14,6 @@ import com.felfeit.androidmvcexample.network.ApiConfig
 import com.felfeit.androidmvcexample.util.DialogUtils
 import com.felfeit.androidmvcexample.util.PreferenceManager
 import com.felfeit.androidmvcexample.view.pages.home.HomeActivity
-import com.felfeit.androidmvcexample.view.pages.register.RegisterActivity
 import dev.androidbroadcast.vbpd.viewBinding
 
 class LoginActivity : AppCompatActivity(R.layout.activity_login), LoginContract.View {
@@ -35,8 +34,6 @@ class LoginActivity : AppCompatActivity(R.layout.activity_login), LoginContract.
             val password = binding.textInputPassword.text.toString().trim()
             controller.login(username, password)
         }
-
-        switchToRegister()
     }
 
     override fun showLoading() {
@@ -53,13 +50,6 @@ class LoginActivity : AppCompatActivity(R.layout.activity_login), LoginContract.
 
     override fun navigateToHome() {
         startActivity(Intent(this, HomeActivity::class.java))
-    }
-
-    private fun switchToRegister() {
-        binding.navigateToRegisterButton.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
-            finish()
-        }
     }
 
     override fun onDestroy() {

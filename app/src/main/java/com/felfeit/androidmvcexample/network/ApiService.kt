@@ -2,9 +2,7 @@ package com.felfeit.androidmvcexample.network
 
 import com.felfeit.androidmvcexample.model.auth.request.LoginUserRequest
 import com.felfeit.androidmvcexample.model.auth.request.RefreshTokenRequest
-import com.felfeit.androidmvcexample.model.auth.request.RegisterUserRequest
 import com.felfeit.androidmvcexample.model.auth.response.RefreshTokenResponse
-import com.felfeit.androidmvcexample.model.auth.response.User
 import com.felfeit.androidmvcexample.model.auth.response.UserLoginResponse
 import com.felfeit.androidmvcexample.model.post.response.Post
 import com.felfeit.androidmvcexample.model.post.response.PostCommentsResponse
@@ -16,9 +14,6 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
-
-    @POST("users/add")
-    suspend fun registerUser(@Body body: RegisterUserRequest): Response<User>
 
     @POST("auth/login")
     suspend fun loginUser(@Body body: LoginUserRequest): Response<UserLoginResponse>

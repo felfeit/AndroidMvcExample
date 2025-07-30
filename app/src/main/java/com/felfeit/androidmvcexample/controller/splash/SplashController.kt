@@ -5,7 +5,7 @@ import com.felfeit.androidmvcexample.model.auth.request.RefreshTokenRequest
 import com.felfeit.androidmvcexample.util.PreferenceManager
 import com.felfeit.androidmvcexample.util.Resource
 import com.felfeit.androidmvcexample.view.base.BaseController
-import com.felfeit.androidmvcexample.view.splash.SplashContract
+import com.felfeit.androidmvcexample.view.pages.splash.SplashContract
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

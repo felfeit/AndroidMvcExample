@@ -8,7 +8,7 @@ interface LoginContract {
         fun navigateToHome()
     }
 
-    interface Controller{
+    interface Controller {
         fun login(username: String, password: String)
     }
 }

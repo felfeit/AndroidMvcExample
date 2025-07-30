@@ -5,12 +5,10 @@
     android:id="@+id/postScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:background="@color/background_color"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -19,17 +17,17 @@
             android:id="@+id/post_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            app:title="Post"
             app:navigationIcon="@drawable/ic_arrow_back"
-            android:background="@color/white"/>
+            app:navigationIconTint="?colorOnSurface"
+            app:title="Post" />
 
         <LinearLayout
             android:id="@+id/contentContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:visibility="gone">
 
 
             <!-- Post Title -->
@@ -56,8 +54,7 @@
                 android:id="@+id/tv_post_tags"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tags: android, kotlin"
-                android:textColor="#858585" />
+                android:text="Tags: android, kotlin" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,9 +70,8 @@
                     android:drawableStart="@drawable/ic_like"
                     android:drawablePadding="8dp"
                     android:gravity="center_vertical"
-                    android:textColor="#252525"
                     android:textSize="14sp"
-                    app:drawableTint="#FF0000"
+                    app:drawableTint="?colorError"
                     tools:text="192 likes" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -86,9 +82,8 @@
                     android:drawableStart="@drawable/ic_dislike"
                     android:drawablePadding="8dp"
                     android:gravity="center_vertical"
-                    android:textColor="#252525"
                     android:textSize="14sp"
-                    app:drawableTint="#666666"
+                    app:drawableTint="?colorOnSurfaceVariant"
                     tools:text="192 dislikes" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -97,9 +92,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_view"
                     android:drawablePadding="8dp"
-                    android:textColor="#252525"
                     android:textSize="14sp"
-                    app:drawableTint="#252525"
+                    app:drawableTint="?colorOnSurfaceVariant"
                     tools:text="305 Views " />
             </LinearLayout>
 
