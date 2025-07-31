@@ -19,6 +19,7 @@
         app:navigationIcon="@drawable/ic_logout"
         app:navigationIconTint="?colorError"
         app:title="Posts"
+        android:background="?colorSurfaceContainerHigh"
         app:titleCentered="true" />
 
     <androidx.recyclerview.widget.RecyclerView

@@ -1,11 +1,14 @@
 package com.felfeit.androidmvcexample.view.pages.home
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import com.google.android.material.color.MaterialColors
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.felfeit.androidmvcexample.R
 import com.felfeit.androidmvcexample.controller.home.HomeController
@@ -18,6 +21,7 @@ import com.felfeit.androidmvcexample.util.PreferenceManager
 import com.felfeit.androidmvcexample.view.adapter.PostAdapter
 import com.felfeit.androidmvcexample.view.pages.login.LoginActivity
 import com.felfeit.androidmvcexample.view.pages.post.PostActivity
+import com.google.android.material.R.attr
 import dev.androidbroadcast.vbpd.viewBinding
 
 class HomeActivity : AppCompatActivity(R.layout.activity_home), HomeContract.View {
@@ -29,6 +33,8 @@ class HomeActivity : AppCompatActivity(R.layout.activity_home), HomeContract.Vie
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = MaterialColors.getColor(this, attr.colorSurfaceContainerHigh, Color.BLACK)
 
         val repository = PostRepository(ApiConfig.getInstance(this))
         val prefs = PreferenceManager(this)

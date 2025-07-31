@@ -1,11 +1,13 @@
 package com.felfeit.androidmvcexample.view.pages.post
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.felfeit.androidmvcexample.R
 import com.felfeit.androidmvcexample.controller.post.PostController
@@ -16,6 +18,8 @@ import com.felfeit.androidmvcexample.model.post.response.Post
 import com.felfeit.androidmvcexample.network.ApiConfig
 import com.felfeit.androidmvcexample.util.DialogUtils
 import com.felfeit.androidmvcexample.view.adapter.CommentAdapter
+import com.google.android.material.R.attr
+import com.google.android.material.color.MaterialColors
 import dev.androidbroadcast.vbpd.viewBinding
 
 class PostActivity : AppCompatActivity(R.layout.activity_post), PostContract.View {
@@ -29,7 +33,9 @@ class PostActivity : AppCompatActivity(R.layout.activity_post), PostContract.Vie
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor =
+            MaterialColors.getColor(this, attr.colorSurfaceContainerHigh, Color.BLACK)
         val repository = PostRepository(ApiConfig.getInstance(this))
         controller = PostController(this, repository)
 

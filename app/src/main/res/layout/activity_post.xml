@@ -19,6 +19,7 @@
             android:layout_height="?actionBarSize"
             app:navigationIcon="@drawable/ic_arrow_back"
             app:navigationIconTint="?colorOnSurface"
+            android:background="?colorSurfaceContainerHigh"
             app:title="Post" />
 
         <LinearLayout
