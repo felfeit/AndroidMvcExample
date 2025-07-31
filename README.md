@@ -1,6 +1,7 @@
 # 📱 AndroidMVCExample
 
-[//]: # (Banner)
+![Android MVC Banner](https://github.com/user-attachments/assets/e506f08c-352e-491a-a641-f42688919fe8)
+
 
 A simple Android project showcasing **MVC (Model-View-Controller)** architecture combined with the **Repository Pattern**, built using Kotlin and Retrofit. This app fetches data from the [DummyJSON API](https://dummyjson.com) and includes basic features like login and viewing posts.
 
@@ -36,4 +37,4 @@ androidmvcexample/
 
 ## 📷 Screenshots
 
-[//]: # (App UI Preview Images)
+![Android MVC Example Screenshots](https://github.com/user-attachments/assets/da61397a-767e-4756-b9f8-be96bcac1400)
